@@ -1,0 +1,23 @@
+.wp-block-separator {
+	&.is-style-tear {
+		margin: -54px 0 0;
+		height: 0;
+		border: 0 none !important;
+	}
+}
+
+*:has(+ .wp-block-separator.is-style-tear) {
+	&::after {
+		content: "";
+		height: 108px;
+		display: block;
+	}
+}
+.wp-block-separator.is-style-tear + * {
+	&::before {
+		content: "";
+		height: 54px;
+		display: block;
+	}
+	mask: url(./images/mask-brush-top-sh__2x.png) 0 0/1440px 43px repeat-x, url(./images/square-white.png) 0 43px/100% calc(100% - 43px) no-repeat;
+}

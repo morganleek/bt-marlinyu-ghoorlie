@@ -15,6 +15,7 @@
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 
 	// Actions
+	add_action( 'init', 'bones_name_register_block_styles', 100 );
 	add_action( 'wp_head', 'bones_theme_js_data_object', 5 );
 	add_action( 'wp_head', 'bones_theme_load_favicons', 20 );
 	add_action( 'current_screen', 'bones_theme_add_editor_styles', 20 );
@@ -101,4 +102,17 @@
 			// phpcs:ignore WordPress.PHP.DevelopmentFunctions -- intentional trigger_error for admin area
 			trigger_error( $e->getMessage(), E_USER_WARNING );// don't break the entire admin page
 		}
+	}
+
+	// admin typekits, loading loading through theme
+	add_action( 'enqueue_block_assets', function() { 
+		wp_enqueue_style( 'font-end-fonts', 'https://use.typekit.net/hgr6bqm.css', [], '1.0.0' );
+	}, 20 );
+
+	// Custom Block Types
+	function bones_name_register_block_styles() {
+		register_block_style( 'core/separator', [
+			'name' => 'tear',
+			'label' => __( 'Tear', 'bones_name' ),
+		] );
 	}

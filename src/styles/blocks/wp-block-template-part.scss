@@ -1,8 +1,16 @@
 // header.wp-block-template-part {
-// 	& > .wp-block-group {
-// 		padding-left: var(--wp--custom--spacing--outer);
-// 		padding-right: var(--wp--custom--spacing--outer);
-// 	}
+// 	// &::before {
+// 	// 	content: "";
+// 	// 	height: 29px;
+// 	// 	background: url(./images/border-top.jpg) 50% 50%/auto 29px repeat-x;
+// 	// 	position: absolute;
+// 	// 	top: 0;
+// 	// 	left: 0;
+// 	// 	right: 0;
+// 	// }
+// 	padding-top: 29px;
+// 	position: relative;
+// 	height: 176px;
 // }
 
 // footer.wp-block-template-part {

@@ -4,35 +4,93 @@
 		"color": {
 			"palette": [
 				{
-					"color": "#bae7e0",
-					"name": "Aqua",
-					"slug": "custom-aqua"
-				},
-				{
-					"color": "#2e5ca5",
-					"name": "Blue",
-					"slug": "custom-blue"
-				},
-				{
-					"color": "#f5f5ef",
+					"color": "#E3EBE8",
 					"name": "Grey",
-					"slug": "custom-grey"
+					"slug": "mg-grey"
 				},
 				{
-					"color": "#e8e6e0",
-					"name": "Taupe",
-					"slug": "custom-taupe"
+					"color": "#95918e",
+					"name": "Grey Dark",
+					"slug": "mg-grey-dark"
 				},
 				{
-					"color": "#63666b",
+					"color": "#324431",
+					"name": "Green Dark",
+					"slug": "mg-green-dark"
+				},
+				{
+					"color": "#758062",
+					"name": "Green",
+					"slug": "mg-green"
+				},
+				{
+					"color": "#B0BBAE",
+					"name": "Green Light",
+					"slug": "mg-green-light"
+				},
+				{
+					"color": "#020202",
 					"name": "Charcoal",
-					"slug": "custom-charcoal"
+					"slug": "mg-charcoal"
+				},
+				{
+					"color": "#C1AB91",
+					"name": "Beige",
+					"slug": "mg-beige"
+				},
+				{
+					"color": "#C98740",
+					"name": "Gold",
+					"slug": "mg-gold"
+				},
+				{
+					"color": "#203727",
+					"name": "Emerald",
+					"slug": "mg-emerald"
 				}
 			]
 		},
+		"custom": {
+			"heading-1": {
+				"typography": {
+					"fontSize": "5.625rem",
+					"lineHeight": "1"
+				}
+			},
+			"heading-2": {
+				"typography": {
+					"fontSize": "4.375rem",
+					"lineHeight": "1"
+				}
+			},
+			"heading-3": {
+				"typography": {
+					"fontSize": "1.75rem",
+					"lineHeight": "1.2"
+				}
+			},
+			"heading-4": {
+				"typography": {
+					"fontSize": "1.5rem",
+					"lineHeight": "1.2"
+				}
+			},
+			"heading-5": {
+				"typography": {
+					"fontSize": "1.25rem",
+					"lineHeight": "1.2"
+				}
+			},
+			"heading-6": {
+				"typography": {
+					"fontSize": "1.2rem",
+					"lineHeight": "1.2em"
+				}
+			}
+		},
 		"layout": {
-			"contentSize": "880px",
-			"wideSize": "1100px"
+			"contentSize": "1120px",
+			"wideSize": "1280px"
 		},
 		"spacing": {
 			"units": [
@@ -45,20 +103,90 @@
 			]
 		},
 		"typography": {
+			"defaultFontSizes": false,
 			"fontFamilies": [
 				{
 					"fontFace": [
 						{
-							"fontFamily": "\"Archivo Narrow\"",
+							"fontFamily": "\"Classico URW\"",
 							"fontStretch": "100%",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": "file:./assets/fonts/ArchivoNarrow-Regular.woff2"
+							"src": ""
 						}
 					],
-					"fontFamily": "\"Archivo Narrow\", sans-serif",
-					"name": "Archivo Narrow",
-					"slug": "archivo-narrow"
+					"fontFamily": "\"classico-urw\", sans-serif",
+					"name": "Classico URW",
+					"slug": "classico-urw"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"the-seasons\"",
+							"fontStretch": "100%",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": ""
+						}
+					],
+					"fontFamily": "\"the-seasons\", sans-serif",
+					"name": "The Seasons",
+					"slug": "the-seasons"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"arimo\"",
+							"fontStretch": "100%",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ""
+						},
+						{
+							"fontFamily": "\"arimo\"",
+							"fontStretch": "100%",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": ""
+						},
+						{
+							"fontFamily": "\"arimo\"",
+							"fontStretch": "100%",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": ""
+						}
+					],
+					"fontFamily": "\"arimo\", sans-serif",
+					"name": "Arimo",
+					"slug": "arimo"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": false,
+					"size": "1rem",
+					"slug": "small"
+				},
+				{
+					"fluid": false,
+					"size": "1.25rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": false,
+					"size": "1.375rem",
+					"slug": "large"
+				},
+				{
+					"fluid": false,
+					"size": "1.5rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": false,
+					"size": "1.75rem",
+					"slug": "xx-large"
 				}
 			]
 		},
@@ -75,7 +203,71 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--archivo-narrow)"
+			"fontFamily": "var(--wp--preset--font-family--arimo)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"lineHeight": "1.555555em"
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "var(--wp--custom--heading-1--typography--font-size)",
+					"fontStyle": "normal",
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--heading-1--typography--line-height)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--custom--heading-2--typography--font-size)",
+					"fontStyle": "normal",
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--heading-2--typography--line-height)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var(--wp--custom--heading-3--typography--font-size)",
+					"fontStyle": "normal",
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--heading-3--typography--line-height)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--armino)",
+					"fontSize": "var(--wp--custom--heading-4--typography--font-size)",
+					"fontStyle": "normal",
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--heading-4--typography--line-height)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--armino)",
+					"fontSize": "var(--wp--custom--heading-5--typography--font-size)",
+					"fontStyle": "normal",
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--heading-5--typography--line-height)"
+				}
+			},
+			"h6": {
+				"color": {
+					"text": "var(--wp--preset--color--murchison-deep)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--armino)",
+					"fontSize": "var(--wp--custom--heading-6--typography--font-size)",
+					"fontStyle": "normal",
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--heading-6--typography--line-height)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--the-seasons)"
+				}
+			}
+			
 		}
 	},
 	"templateParts": [
