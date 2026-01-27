@@ -187,3 +187,55 @@
 		}
 	}
 }
+
+.chapter-questions {
+	background: red;
+}
+.wp-block-mgcat-questions {
+	// height: 100dvh;
+	// display: grid;
+	// grid-template-rows: 1fr 96px;
+}
+.wp-block-mgcat-question {
+	display: none;
+	&.visible {
+		display: block;
+	}
+}
+.wp-block-mgcat-question-navigation {
+	// grid-area: 2 / 1 / 3 / 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	background: #E4EBE8;
+	.question-marker-dot {
+		border: 0 none;
+		background: #B0BBAE;
+		width: 12px;
+		height: 12px;
+		border-radius: 24px;
+		&.answered { 
+			background: #C98740;
+		}
+	}
+}
+
+.wp-block-mgcat-anwers {
+	button {
+		display: flex;
+		min-height: 118px;
+		padding: var(--Spacing-30, 32px);
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		flex: 1 0 0;
+		align-self: stretch;
+		&.selected {
+			border-radius: var(--Radius-Small, 8px);
+			border: 1px solid var(--Color-Two, #324431);
+			background: var(--Color-Four, #E3EBE8);
+			box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+		}
+	}
+}
