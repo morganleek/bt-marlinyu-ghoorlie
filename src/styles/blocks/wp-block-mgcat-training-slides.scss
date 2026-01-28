@@ -14,6 +14,99 @@
 	}
 }
 
+@mixin mgcat-answer-button {
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	min-height: 118px;
+	display: flex;
+	align-items: center;
+	justify-content: stretch;
+	background: #fff;
+	font-size: var(--wp--preset--font-size--x-large);
+	font-family: var(--wp--preset--font-family--arimo);
+	border: 1px solid var(--wp--preset--color--mg-green);
+	color: var(--wp--preset--color--mg-green-dark);
+	box-shadow: var(--drop-shadow);
+	font-weight: 300;
+	&.selected {
+		border-radius: 0.5rem;
+		border: 1px solid var(--wp--preset--color--mg-green-dark);
+		background: var(--wp--preset--color--mg-grey);
+		// box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+	}
+	p:not([class*="has-text-align-"]) {
+		text-align: center;
+	}
+}
+
+@mixin mgcat-first-last-margin {
+	& > * {
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+:root {
+	--drop-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+	--h1-size: 62px;
+	--h2-size: 42px;
+	--h3-size: 32px;
+	--h4-size: 26px;
+	--h5-size: 18px;
+	--h6-size: 16px;
+	--p-quote: 32px;
+	--radius-small: 8px;
+	--p-small-size: 14px;
+	--p-medium-size: 16px;
+	--p-large-size: 18px;
+	--p-x-large-size: 22px;
+	--p-xx-large: 26px;
+	--spacing-20: 16px;
+	--spacing-30: 32px;
+	--spacing-40: 48px;
+	--spacing-50: 64px;
+	--spacing-60: 80px;
+	--spacing-70: 96px;
+	--spacing-80: 146px;
+	--content-size: 1000px;
+	--wide-size: 1340px;
+	--color-one: #ffffff;
+	--color-two: #324431;   // --wp--preset--color--mg-green-dark
+	--color-three: #758062; // --wp--preset--color--mg-green
+	--color-four: #e3ebe8;  // --wp--preset--color--mg-grey
+	--color-five: #c1ab91;  // --wp--preset--color--mg-beige
+	--color-six: #b0bbae;   // --wp--preset--color--mg-green-light
+	--color-seven: #c98740; // --wp--preset--color--mg-gold
+	--color-eight: #203727; // --wp--preset--color--mg-emerald
+
+	@media (max-width: 781px) {
+		--h1-size: 34.400001525878906px;
+		--h2-size: 28px;
+		--h3-size: 20px;
+		--h4-size: 18px;
+		--h5-size: 16px;
+		--h6-size: 14px;
+		--p-quote: 20px;
+		--radius-small: 8px;
+		--p-small-size: 14px;
+		--p-medium-size: 16px;
+		--p-large-size: 18px;
+		--p-x-large-size: 18px;
+		--p-xx-large: 20px;
+		--spacing-20: 10px;
+		--spacing-30: 20px;
+		--spacing-40: 30px;
+		--spacing-50: 40px;
+		--spacing-60: 50px;
+		--spacing-70: 60px;
+		--spacing-80: 90px;
+	}
+}
+
 .wp-block-mgcat-training-slides {
 	&:not(.block-editor-block-list__block) {
 		input[type="text"] {
@@ -189,17 +282,51 @@
 }
 
 .chapter-questions {
-	background: red;
+	width: 100vw;
+	height: 80vh; // 100dvh
+	overflow-x: hidden;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	border: 2px dashed #b0e0e6; // temp
+	// background: rgba(255, 0, 0, 0.1);
 }
 .wp-block-mgcat-questions {
-	// height: 100dvh;
-	// display: grid;
-	// grid-template-rows: 1fr 96px;
-}
-.wp-block-mgcat-question {
-	display: none;
-	&.visible {
-		display: block;
+	display: grid;
+	width: 100vw;
+	gap: 0;
+	transition: all 0.2s;
+	@for $i from 1 through 10 {
+		&[data-size="#{$i}"] {
+			width: calc($i * 100vw);
+			grid-template-columns: repeat($i, 1fr);
+		}
+	}
+	@for $i from 0 through 9 {
+		&[data-current="#{$i}"] {
+			transform: translate(calc($i * -100vw), 0);
+		}
+	}
+	.wp-block-mgcat-question {
+		&:not(.block-editor-block-list__block) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			.question-content {
+				@include mgcat-first-last-margin;
+			}
+			& > * {
+				max-width: 900px;
+				padding: 2rem;
+				margin: 0 auto;
+			}
+		}
+		&.block-editor-block-list__block {
+			border: 2px dashed #b0e0e6;
+			max-width: 900px;
+			padding: 2rem;
+			margin: 0 auto;
+		}
 	}
 }
 .wp-block-mgcat-question-navigation {
@@ -209,33 +336,81 @@
 	justify-content: center;
 	gap: 20px;
 	background: #E4EBE8;
-	.question-marker-dot {
-		border: 0 none;
-		background: #B0BBAE;
-		width: 12px;
-		height: 12px;
-		border-radius: 24px;
-		&.answered { 
-			background: #C98740;
+	width: 100vw;
+	padding: var(--wp--preset--spacing--30);
+	button {
+		&.question-marker-dot {
+			border: 0 none;
+			background: #B0BBAE;
+			width: 12px;
+			height: 12px;
+			border-radius: 24px;
+			&.answered { 
+				background: #C98740;
+			}
+		}
+		&:not(.question-marker-dot) {
+			border: 0 none;
+			padding: 14px 20px;
+			border-radius: 100px;
+			background-color: var(--wp--preset--color--mg-gold);
+			font-size: 1.25rem;
+			color: #fff;
+			font-weight: 600;
+			margin: 0 44px;
+			&[disabled] {
+				background-color: rgba(#BF8A4D, 0.5);
+				color: rgba(#FFFFFF, 0.5);
+			}
+		}
+	}
+}
+.wp-block-mgcat-answers {
+	&:not(.block-editor-block-list__block) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem;
+		max-width: 900px;
+		margin: 0 auto;
+		button {
+			@include mgcat-answer-button;
+			.wp-block-mgcat-answer {
+				display: block;
+				width: 100%;
+				& > * {
+					&:first-child {
+						margin-top: 0;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	&.block-editor-block-list__block {
+		& > .block-editor-inner-blocks > .block-editor-block-list__layout {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 1rem;
+			max-width: 900px;
+			margin: 0 auto;
+			.wp-block-mgcat-answer {
+				& > .block-editor-inner-blocks > .block-editor-block-list__layout {
+					@include mgcat-answer-button;
+					& > * {
+						display: block;
+						width: 100%;
+						&:first-child {
+							margin-top: 0;
+						}
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
 		}
 	}
 }
 
-.wp-block-mgcat-anwers {
-	button {
-		display: flex;
-		min-height: 118px;
-		padding: var(--Spacing-30, 32px);
-		justify-content: center;
-		align-items: center;
-		gap: 10px;
-		flex: 1 0 0;
-		align-self: stretch;
-		&.selected {
-			border-radius: var(--Radius-Small, 8px);
-			border: 1px solid var(--Color-Two, #324431);
-			background: var(--Color-Four, #E3EBE8);
-			box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
-		}
-	}
-}

@@ -108,16 +108,23 @@
 				{
 					"fontFace": [
 						{
-							"fontFamily": "\"Classico URW\"",
+							"fontFamily": "\"plantin\"",
 							"fontStretch": "100%",
 							"fontStyle": "normal",
-							"fontWeight": "400",
+							"fontWeight": "600",
+							"src": ""
+						},
+						{
+							"fontFamily": "\"plantin\"",
+							"fontStretch": "100%",
+							"fontStyle": "normal",
+							"fontWeight": "700",
 							"src": ""
 						}
 					],
-					"fontFamily": "\"classico-urw\", sans-serif",
-					"name": "Classico URW",
-					"slug": "classico-urw"
+					"fontFamily": "\"plantin\", serif",
+					"name": "Plantin",
+					"slug": "plantin"
 				},
 				{
 					"fontFace": [
@@ -136,56 +143,56 @@
 				{
 					"fontFace": [
 						{
-							"fontFamily": "\"arimo\"",
+							"fontFamily": "\"acumin-pro\"",
 							"fontStretch": "100%",
 							"fontStyle": "normal",
 							"fontWeight": "400",
 							"src": ""
 						},
 						{
-							"fontFamily": "\"arimo\"",
+							"fontFamily": "\"acumin-pro\"",
 							"fontStretch": "100%",
 							"fontStyle": "italic",
 							"fontWeight": "400",
 							"src": ""
 						},
 						{
-							"fontFamily": "\"arimo\"",
+							"fontFamily": "\"acumin-pro\"",
 							"fontStretch": "100%",
 							"fontStyle": "normal",
 							"fontWeight": "700",
 							"src": ""
 						}
 					],
-					"fontFamily": "\"arimo\", sans-serif",
-					"name": "Arimo",
-					"slug": "arimo"
+					"fontFamily": "\"acumin-pro\", sans-serif",
+					"name": "Acumin Pro",
+					"slug": "acumin-pro"
 				}
 			],
 			"fontSizes": [
 				{
 					"fluid": false,
-					"size": "1rem",
+					"size": "0.875rem",
 					"slug": "small"
 				},
 				{
 					"fluid": false,
-					"size": "1.25rem",
+					"size": "1rem",
 					"slug": "medium"
 				},
 				{
 					"fluid": false,
-					"size": "1.375rem",
+					"size": "1.125rem",
 					"slug": "large"
 				},
 				{
 					"fluid": false,
-					"size": "1.5rem",
+					"size": "1.375rem",
 					"slug": "x-large"
 				},
 				{
 					"fluid": false,
-					"size": "1.75rem",
+					"size": "2.125rem",
 					"slug": "xx-large"
 				}
 			]
@@ -203,7 +210,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--arimo)",
+			"fontFamily": "var(--wp--preset--font-family--acumin-pro)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"lineHeight": "1.555555em"
 		},
@@ -212,7 +219,7 @@
 				"typography": {
 					"fontSize": "var(--wp--custom--heading-1--typography--font-size)",
 					"fontStyle": "normal",
-					"fontWeight": "700",
+					"fontWeight": "600",
 					"lineHeight": "var(--wp--custom--heading-1--typography--line-height)"
 				}
 			},
@@ -220,7 +227,7 @@
 				"typography": {
 					"fontSize": "var(--wp--custom--heading-2--typography--font-size)",
 					"fontStyle": "normal",
-					"fontWeight": "700",
+					"fontWeight": "600",
 					"lineHeight": "var(--wp--custom--heading-2--typography--line-height)"
 				}
 			},
@@ -228,22 +235,20 @@
 				"typography": {
 					"fontSize": "var(--wp--custom--heading-3--typography--font-size)",
 					"fontStyle": "normal",
-					"fontWeight": "700",
+					"fontWeight": "600",
 					"lineHeight": "var(--wp--custom--heading-3--typography--line-height)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--armino)",
 					"fontSize": "var(--wp--custom--heading-4--typography--font-size)",
 					"fontStyle": "normal",
-					"fontWeight": "700",
+					"fontWeight": "600",
 					"lineHeight": "var(--wp--custom--heading-4--typography--line-height)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--armino)",
 					"fontSize": "var(--wp--custom--heading-5--typography--font-size)",
 					"fontStyle": "normal",
 					"fontWeight": "700",
@@ -255,16 +260,15 @@
 					"text": "var(--wp--preset--color--murchison-deep)"
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--armino)",
 					"fontSize": "var(--wp--custom--heading-6--typography--font-size)",
 					"fontStyle": "normal",
-					"fontWeight": "700",
+					"fontWeight": "600",
 					"lineHeight": "var(--wp--custom--heading-6--typography--line-height)"
 				}
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--the-seasons)"
+					"fontFamily": "var(--wp--preset--font-family--plantin)"
 				}
 			}
 			
