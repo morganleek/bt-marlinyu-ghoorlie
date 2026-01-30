@@ -416,6 +416,10 @@
 		gap: 1rem;
 		max-width: 900px;
 		margin: 0 auto;
+		&[data-count="2"],
+		&[data-count="4"] {
+			grid-template-columns: 1fr 1fr;
+		}
 		button {
 			@include mgcat-answer-button;
 			.wp-block-mgcat-answer {
