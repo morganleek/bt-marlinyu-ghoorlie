@@ -1,0 +1,35 @@
+.wp-block-list {
+	&.is-style-centred {
+		list-style: none;
+		ul {
+			list-style: none;
+			margin-top: 6px;
+			margin-bottom: 6px;
+		}
+		& > li {
+			
+			&:not(:first-child) {
+				margin-top: 1rem;
+			}
+		}
+		li {
+			text-align: center;
+			&:not(.block-editor-block-list__block) {
+				&::before {
+					content: "• ";
+					font-family: "arial";
+					display: inline;
+				}
+			}
+			&.block-editor-block-list__block {
+				.rich-text {
+					&::before {
+						content: "• ";
+						font-family: "arial";
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-body.page-template-training-headless {
+.wp-block-mgcat-training {
 	--wp--custom--heading-1--typography--font-size: clamp(2.15rem, -0.0063rem + 6.9vw, 3.875rem); // 34.4 => 62
 	--wp--custom--heading-1--typography--line-height: 1.2em;
 	--wp--custom--heading-2--typography--font-size: clamp(1.75rem, 0.6563rem + 3.5vw, 2.625rem); // 28 => 42
@@ -35,5 +35,9 @@ body.page-template-training-headless {
 	.has-x-large-font-size,
 	.has-xx-large-font-size {
 		line-height: 1.2em;
+	}
+
+	.has-xx-large-font-size {
+		font-weight: 300;
 	}
 }

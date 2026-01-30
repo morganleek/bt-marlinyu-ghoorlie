@@ -115,4 +115,19 @@
 			'name' => 'tear',
 			'label' => __( 'Tear', 'bones_name' ),
 		] );
+
+		register_block_style( 'core/list', [
+			'name' => 'centred',
+			'label' => __( 'Centred', 'bones_name' ),
+		] );
+
+		register_block_style( 'core/image', [
+			'name' => 'tilt-left',
+			'label' => __( 'Tilt Left', 'bones_name' ),
+		] );
+
+		register_block_style( 'core/image', [
+			'name' => 'tilt-right',
+			'label' => __( 'Tilt Right', 'bones_name' ),
+		] );
 	}

@@ -143,30 +143,16 @@
 				{
 					"fontFace": [
 						{
-							"fontFamily": "\"acumin-pro\"",
+							"fontFamily": "\"acumin-variable\"",
 							"fontStretch": "100%",
 							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": ""
-						},
-						{
-							"fontFamily": "\"acumin-pro\"",
-							"fontStretch": "100%",
-							"fontStyle": "italic",
-							"fontWeight": "400",
-							"src": ""
-						},
-						{
-							"fontFamily": "\"acumin-pro\"",
-							"fontStretch": "100%",
-							"fontStyle": "normal",
-							"fontWeight": "700",
+							"fontWeight": "100 900",
 							"src": ""
 						}
 					],
-					"fontFamily": "\"acumin-pro\", sans-serif",
-					"name": "Acumin Pro",
-					"slug": "acumin-pro"
+					"fontFamily": "\"acumin-variable\", sans-serif",
+					"name": "Acumin",
+					"slug": "acumin-variable"
 				}
 			],
 			"fontSizes": [
@@ -210,9 +196,10 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--acumin-pro)",
+			"fontFamily": "var(--wp--preset--font-family--acumin-variable)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
-			"lineHeight": "1.555555em"
+			"lineHeight": "1.555555em",
+			"fontWeight": "400"
 		},
 		"elements": {
 			"h1": {
