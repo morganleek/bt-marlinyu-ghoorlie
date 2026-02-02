@@ -1,6 +1,27 @@
-// .wp-block-table {
-// 	table {
-// 	}
-// 	figcaption {
-// 	}
-// }
+.wp-block-table {
+	&.is-style-timeline {
+		table {
+			font-size: var(--wp--preset--font-size--large);
+			tbody {
+				tr {
+					&:nth-child(odd) {
+						td {
+							background: rgba(255, 255, 255, 0.5);
+						}
+					}
+					td {
+						vertical-align: top;
+						border: 0 none;
+						&:first-child {
+							font-weight: bold;
+							width: 140px;
+							text-align: right;
+							font-size: var(--wp--preset--font-size--x-large);
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}

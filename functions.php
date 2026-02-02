@@ -130,4 +130,9 @@
 			'name' => 'tilt-right',
 			'label' => __( 'Tilt Right', 'bones_name' ),
 		] );
+
+		register_block_style( 'core/table', [
+			'name' => 'timeline',
+			'label' => __( 'Timeline', 'bones_name' ),
+		] );
 	}
