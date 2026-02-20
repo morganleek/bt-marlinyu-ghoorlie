@@ -1,4 +1,5 @@
 .wp-block-image {
+	position: relative;
 	&.is-style-tilt-left {
 		transform: rotate(-1deg);
 	}

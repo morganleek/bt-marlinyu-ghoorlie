@@ -1,6 +1,9 @@
 import 'vite/modulepreload-polyfill';
 import './style.scss';
-import 'fslightbox';
+
+// import 'node_modles/fslightbox';
+import GLightbox from 'glightbox';
+
 // // GSAP
 // import { gsap } from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -25,6 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		p.innerHTML = p.innerHTML.replace( '{YEAR}', new Date().getUTCFullYear() );
 	} );
 
+	document.body.addEventListener( "mouseenter", e => {
+		if( e.target.matches( "img" ) && e.target.getAttribute("alt").length > 0 ) {
+			console.log( 'img' );
+			const img = e.target;
+			const toolTip = document.createElement( "span" );
+			toolTip.classList.add( "tool-tip" );
+			toolTip.innerHTML = img.getAttribute("alt");
+			console.log( img, img.parentNode );
+			img.parentNode.appendChild( toolTip );
+
+			img.addEventListener( "mouseleave", () => {
+				toolTip.remove();
+			} );
+		}
+	}, { capture: true } );
+
 	// // Animate on Scroll
 	// document.querySelectorAll( ".wp-block-mgcat-training h1, .wp-block-mgcat-training h2, .wp-block-mgcat-training h3, .wp-block-mgcat-training h4, .wp-block-mgcat-training h5, .wp-block-mgcat-training h6, .wp-block-mgcat-training p, .wp-block-mgcat-training .wp-block-list, .wp-block-mgcat-training .wp-block-embed, .wp-block-mgcat-training .wp-block-image, .wp-block-mgcat-training .wp-block-pullquote, .wp-block-mgcat-training .wp-block-group.has-white-background-color:has(.wp-block-audio)" ).forEach( block => {
 	// 	ScrollTrigger.create({
@@ -44,10 +63,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	// document.body.addEventListener( "click", e => {
 	// 	if( e.target.closest( '.wp-block-image' ) && e.target.closest( 'a' ) ) {
 	// 		e.preventDefault();
-	// 		const lightbox = new FsLightbox();
-	// 		lightbox.props.sources = [e.target.closest( 'a' ).href];
-	// 		lightbox.open();
-	// 		console.log( lightbox.props.sources );
+	// 		const source = e.target.closest( 'a' ).href;
+	// 		const myGallery = GLightbox( {
+	// 			elements: [
+	// 				{
+	// 					'href': source,
+	// 					'type': 'video',
+	// 					'source': 'vimeo', //vimeo, youtube or local
+	// 					'width': 900,
+	// 				}
+	// 			],
+	// 			autoplayVideos: true,
+	// 		} );
+	// 		myGallery.open();
 	// 	}
 	// } );
 });
