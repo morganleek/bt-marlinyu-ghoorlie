@@ -1,22 +1,58 @@
 .wp-block-table {
 	&.is-style-timeline {
+		position: relative;
+		&::before {
+			content: "";
+			width: 2px;
+			height: 100%;
+			background: #fff;
+			left: 50%;
+			position: absolute;
+			transform: translate(-1px, 0);
+		}
 		table {
 			font-size: var(--wp--preset--font-size--large);
 			tbody {
 				tr {
+					display: flex;
+					align-items: center;
+					position: relative;
+					&::before {
+						content: "";
+						width: 12px;
+						height: 12px;
+						border-radius: 6px;
+						background: white;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-6px, 0);
+					}
+					& > * {
+						flex: 1;
+					}
 					&:nth-child(odd) {
-						td {
-							background: rgba(255, 255, 255, 0.5);
+						flex-direction: row-reverse;
+						td:nth-child(1) {
+							text-align: left;
 						}
+						td:nth-child(2) {
+							text-align: right;
+						}
+						// 	// background: rgba(255, 255, 255, 0.5);
+						// }
 					}
 					td {
 						vertical-align: top;
 						border: 0 none;
+						padding: 1rem 2rem;
+						font-size: var(--wp--preset--font-size--x-large);
 						&:first-child {
-							font-weight: bold;
+							font-family: var(--wp--preset--font-family--plantin);
+							font-size: 2rem !important;
+							// font-weight: bold;
 							width: 140px;
 							text-align: right;
-							font-size: var(--wp--preset--font-size--x-large);
 						}
 					}
 					
