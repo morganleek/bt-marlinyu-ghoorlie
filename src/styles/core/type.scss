@@ -7,6 +7,11 @@ h1 {
 	}
 }
 
+sup, sub {
+	line-height: 1em;
+	font-size: 0.9375rem;
+}
+
 .has-x-large-font-size {
 	line-height: var(--wp--custom--line-height--x-large);
 }
