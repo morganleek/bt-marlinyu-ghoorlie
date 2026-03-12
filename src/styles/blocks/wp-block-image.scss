@@ -45,7 +45,8 @@
 }
 
 .wp-block-embed,
-.wp-block-image {
+.wp-block-image,
+.wp-block-audio {
 	:where(figcaption) {
 		margin-top: 4px;
 		margin-bottom: 0;
