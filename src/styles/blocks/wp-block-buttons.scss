@@ -32,8 +32,17 @@
 		}
 		.wp-block-button__link {
 			font-weight: 600;
+			transition: background 0.2s;
 			&.has-large-font-size {
 				font-size: 1.25rem;
+			}
+			@media (hover: hover) {
+				&.has-mg-gold-background-color:hover {
+					background-color: #c5731b !important;
+				}
+				&.has-mg-grey-background-color:hover {
+					background-color: var(--wp--preset--color--mg-green-light) !important;
+				}
 			}
 		}
 	}
