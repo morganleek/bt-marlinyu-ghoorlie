@@ -20,9 +20,7 @@
 		& > .wp-block-navigation-item {
 			&.current-menu-item {
 				& > .wp-block-navigation-item__content {
-					&::after {
-						background-color: rgba(#5E7455, 0.95);
-					}
+					color: var(--wp--preset--color--mg-gold) !important;
 				}
 			}
 			& > .wp-block-navigation-item__content {
@@ -30,6 +28,7 @@
 				letter-spacing: 0.1em;
 				padding: 12px 0;
 				position: relative;
+				transition: color 0.2s;
 				&::after {
 					content: "";
 					width: 100%;
@@ -45,6 +44,7 @@
 			@media (hover: hover) {
 				&:hover {
 					& > .wp-block-navigation-item__content {
+						color: #5E7455 !important;
 						&::after {
 							background-color: rgba(#5E7455, 0.95);
 						}
@@ -74,8 +74,18 @@
 						background: url(./images/dots.svg) 0 0/4px 2px repeat-x;
 					}
 				}
+				@media (hover: hover) { 
+					&:hover {
+						.wp-block-navigation-item__content {
+							color: var(--wp--preset--color--mg-gold) !important;
+						}
+					}
+				}
 				.wp-block-navigation-item__content {
 					padding: 14px 2px;
+					font-variation-settings: "wght" 500, "wdth" 61, "slnt" 0;
+					color: #5E7455;
+					transition: color 0.2s;
 				}
 			}
 		}
