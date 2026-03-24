@@ -1,5 +1,6 @@
 @use '../core/mixins';
 
+
 * {
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -67,4 +68,30 @@ button {
   border-radius: 4px;
   transform: translate(-50%, 0);
   box-shadow: 0 0 10px #000;
+}
+
+.slick-slider {
+	.slick-arrow {
+		width: 22px;
+		height: 39px;
+		&::before {
+			content: "";
+			width: 22px;
+			height: 39px;
+			background: var(--wp--preset--color--mg-gold);
+			opacity: 1;
+			display: block;
+			clip-path: path("M19.5,39c-.511719,0-1.023438-.195312-1.414062-.585938L.585938,20.914062c-.78125-.78125-.78125-2.047363,0-2.828125L18.085938.585938c.78125-.78125,2.046875-.78125,2.828125,0,.78125.780762.78125,2.047363,0,2.828125L4.828613,19.5l16.085449,16.085938c.78125.78125.78125,2.046875,0,2.828125-.390625.390625-.902344.585938-1.414062.585938Z");
+		}
+		&.slick-prev {
+			left: -12px;
+		}
+		&.slick-next {
+			right: -12px;
+			&::before {
+				transform: rotate(180deg);
+				transform-origin: 50% 50%;
+			}
+		}
+	}	
 }

@@ -1,2 +1,16 @@
-// .wp-block-group {
-// }
+.wp-block-group {
+	&.mailing-list {
+		position: relative;
+		z-index: 10;
+		&::after {
+			display: none !important;
+		}
+		& + .wp-block-separator.is-style-tear {
+			margin-top: -114px !important;
+			& + footer {
+				position: relative;
+				z-index: 1;
+			}
+		}
+	}
+}

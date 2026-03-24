@@ -135,4 +135,9 @@
 			'name' => 'timeline',
 			'label' => __( 'Timeline', 'bones_name' ),
 		] );
+
+		register_block_style( 'core/button', [
+			'name' => 'naked',
+			'label' => __( 'Naked', 'bones_name' ),
+		] );
 	}

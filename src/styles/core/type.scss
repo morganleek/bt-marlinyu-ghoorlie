@@ -12,6 +12,11 @@ sup, sub {
 	font-size: 0.9375rem;
 }
 
+.has-acumin-variable-font-family {
+  font-variation-settings: "wght" 700, "wdth" 61, "slnt" 0;
+  letter-spacing: 0.05em;
+}
+
 .has-x-large-font-size {
 	line-height: var(--wp--custom--line-height--x-large);
 }

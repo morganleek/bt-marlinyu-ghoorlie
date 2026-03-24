@@ -1,3 +1,4 @@
+
 .wp-block-separator {
 	&.is-style-tear {
 		margin: -54px 0 0;
@@ -9,7 +10,7 @@
 *:has(+ .wp-block-separator.is-style-tear) {
 	&::after {
 		content: "";
-		height: 108px;
+		height: 54px;
 		display: block;
 	}
 }
