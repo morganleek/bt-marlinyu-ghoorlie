@@ -6,21 +6,19 @@
 		padding-left: 0;
 		ul {
 			list-style: none;
-			margin-top: 6px;
-			margin-bottom: 6px;
+			margin-top: 12px;
+			margin-bottom: 12px;
+			padding: 0;
+			li {
+				&:not(:first-child) {
+					margin-top: 0.4em;
+				}
+			}
 		}
 		& > li {
 			&:not(:first-child) {
 				margin-top: 2rem;
 			}
-		}
-		li {
-			text-align: center;
-			position: relative;
-			font-weight: 200;
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
 			& + li {
 				&::before {
 					content: "";
@@ -33,6 +31,14 @@
 					transform: translate(-50%, 0);
 				}
 			}
+		}
+		li {
+			text-align: center;
+			position: relative;
+			font-weight: 200;
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }

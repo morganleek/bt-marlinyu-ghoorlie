@@ -4,19 +4,19 @@
     "src": "src/images/mask-brush-top-sh__2x.png"
   },
   "src/index.js": {
-    "file": "assets/main-xC39kvUX.js",
+    "file": "assets/main-CLKSs-Ll.js",
     "name": "main",
     "src": "src/index.js",
     "isEntry": true,
     "css": [
-      "assets/style_only-DPsvs25h.css"
+      "assets/style_only-B_VmVjaR.css"
     ],
     "assets": [
       "assets/mask-brush-top-sh__2x-NgvbDcbO.png"
     ]
   },
   "src/style.scss": {
-    "file": "assets/style_only-DPsvs25h.css",
+    "file": "assets/style_only-B_VmVjaR.css",
     "src": "src/style.scss",
     "isEntry": true
   }
