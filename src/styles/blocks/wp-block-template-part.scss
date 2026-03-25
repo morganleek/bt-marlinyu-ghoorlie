@@ -12,6 +12,9 @@
 // 	position: relative;
 // 	height: 176px;
 	&:is(header) {
+		position: sticky;
+		top: -20px;
+		z-index: 999;
 		.hide-for-search {
 			opacity: 1;
 			pointer-events: all;
@@ -22,33 +25,79 @@
 				opacity: 0;
 				pointer-events: none;
 			}
-			// @media (min-width: 992px) { 
-			// 	.wp-block-navigation {
-			// 		.wp-block-navigation__responsive-container-content {
-			// 			opacity: 0;
-			// 			pointer-events: none;
-			// 		}
-			// 	}
-			// }
-			// @media (width < 992px) { 
-			// 	.wp-block-site-logo {
-			// 		opacity: 0;
-			// 		pointer-events: none;
-			// 	}
-			// }
 		}
 		.header-navigation-buttons {
-			// align-self: stretch;
-			// min-height: 100%;
-			margin-right: 20px;
 			gap: 1rem;
 			padding-top: 20px;
+			@media (min-width: 1080px) { 
+				margin-right: 20px;
+			}
 		}
 		.wp-block-buttons {
 			.wp-block-button {
 				.wp-block-button__link {
 					padding: 10px 20px;
 					letter-spacing: 0.1em;
+				}
+			}
+		}
+		.logo-wrapper {
+			flex-basis: min(400px, 31.25vw);
+			.wp-block-image {
+				&.mgac-logo-left {
+					transform-origin: left bottom;
+					transition: all 0.2s ease-out;
+					flex-basis: 44.125%;
+				}
+				&.mgac-logo-right {
+					transition: opacity 0.2s;
+					flex-basis: 55.875%;
+				}
+			}
+			@media (width < 1280px) { 
+				flex-basis: 177px !important;
+				.wp-block-image {
+					&.mgac-logo-left {
+						flex-basis: 100%;
+					}
+					&.mgac-logo-right {
+						display: none;
+					}
+				}	
+			}
+		}
+		body.is-scrolled & {
+			& > .wp-block-group {
+				transition: padding 0.2s;
+				& > .wp-block-group {
+					// border-radius: clamp(1.875rem, -2.5711rem + 14.2276vw, 6.25rem) !important;
+					transition: width 0.2s, border-radius 0.2s, padding 0.2s;
+				}
+			}
+			// .wp-block-enviropipes-site-search {
+			// 	min-height: 32px;
+			// 	@media (min-width: 992px) { 
+			// 		min-height: 66px;
+			// 	}
+			// 	.search-results .top {
+			// 			--search--height: 48px;	
+			// 		@media (min-width: 992px) { 
+			// 			--search--height: 82px;	
+			// 		}
+			// 	} 
+			// }
+
+			& > .wp-block-group {
+				& > .wp-block-group {
+					max-width: 100vw !important;
+				}
+			}
+			.wp-block-image {
+				&.mgac-logo-left {
+					transform: scale(0.75);
+				}
+				&.mgac-logo-right {
+					opacity: 0;
 				}
 			}
 		}

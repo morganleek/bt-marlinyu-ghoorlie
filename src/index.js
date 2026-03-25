@@ -5,9 +5,9 @@ import './style.scss';
 import GLightbox from 'glightbox';
 
 // // GSAP
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// gsap.registerPlugin(ScrollTrigger);
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 // Slider - Library import example
 // import { tns } from "tiny-slider"
@@ -43,6 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			} );
 		}
 	}, { capture: true } );
+
+	// Main menu scroll appearance
+	let top = 20;
+	if( !isNaN( parseInt(getComputedStyle(document.documentElement).getPropertyValue('--wp-admin--admin-bar--height').trim())) ) {
+		top -= parseInt(getComputedStyle(document.documentElement).getPropertyValue('--wp-admin--admin-bar--height').trim());
+	}
+	console.log( top );
+	gsap.timeline({
+		scrollTrigger: {
+			scrub: 1,
+			trigger: '.wp-site-blocks',
+			start: `${top}px top`,
+			// markers: true,
+			endTrigger: 'footer',
+			end: 'bottom top',
+			onToggle: (self) => document.body.classList.toggle( "is-scrolled", self.isActive )
+		},
+	});
 
 	// // Animate on Scroll
 	// document.querySelectorAll( ".wp-block-mgcat-training h1, .wp-block-mgcat-training h2, .wp-block-mgcat-training h3, .wp-block-mgcat-training h4, .wp-block-mgcat-training h5, .wp-block-mgcat-training h6, .wp-block-mgcat-training p, .wp-block-mgcat-training .wp-block-list, .wp-block-mgcat-training .wp-block-embed, .wp-block-mgcat-training .wp-block-image, .wp-block-mgcat-training .wp-block-pullquote, .wp-block-mgcat-training .wp-block-group.has-white-background-color:has(.wp-block-audio)" ).forEach( block => {
