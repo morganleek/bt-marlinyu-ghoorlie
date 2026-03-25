@@ -223,9 +223,11 @@
 }
 .wp-block-mgcat-questions {
 	display: grid;
-	width: 100vw;
 	gap: 0;
 	transition: all 0.2s;
+	&:not(.block-editor-block-list__block) {
+		width: 100vw;
+	}
 	@for $i from 1 through 10 {
 		&[data-size="#{$i}"] {
 			width: calc($i * 100vw);
