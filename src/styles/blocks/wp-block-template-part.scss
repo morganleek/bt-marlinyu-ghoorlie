@@ -118,6 +118,14 @@
 				font-size: 0.9375rem;
 			}
 		}
+		a {
+			text-decoration: none;
+			@media(hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 }
 

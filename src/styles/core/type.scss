@@ -30,6 +30,10 @@ sup, sub {
 	line-height: var(--wp--custom--small--typography--line-height);
 }
 
+strong {
+	font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0;
+}
+
 // @for $i from 1 through 6 {
 // 	h#{$i} {
 // 		&.has-x-large-font-size {
