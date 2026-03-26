@@ -1,5 +1,16 @@
 @use '../core/mixins';
 
+:root {
+	:where(.wp-element-button) {
+		background-color: var(--wp--preset--color--mg-gold);
+		font-size: var(--wp--preset--font-size--large) !important;
+		line-height: var(--wp--custom--large--typography--line-height);
+		font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0;
+		transition: background .2s;
+		border-radius: 9999px;
+		box-shadow: none;
+	}
+}
 
 * {
 	-webkit-font-smoothing: antialiased;
