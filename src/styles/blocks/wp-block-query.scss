@@ -1,2 +1,20 @@
-// .wp-block-query {	
-// }
+.wp-block-query {	
+	.wp-block-post-template {
+		.wp-block-post {
+			&.post {
+				.wp-block-post-featured-image {
+					overflow: hidden;
+				}
+				@media(hover: hover) {
+					&:hover {
+						.wp-block-post-featured-image {
+							img {
+								transform: scale(110%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
