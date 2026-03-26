@@ -77,6 +77,11 @@
 	h1, h2, h3, h4, h5, h6 {
 		color: currentColor;
 	}
+	h1 {
+		&:not(.has-arimo-font-family) {
+			text-indent: -12px;
+		}
+	}
 	dialog {
 		z-index: 10;
 		position: fixed;
