@@ -123,6 +123,7 @@
 	}
 	&:not(.block-editor-block-list__block) {
 		// loading...
+		& > .wp-block-mgcat-introduction,
 		& > .wp-block-mgcat-chapter {
 			opacity: 0;
 			&[data-active="false"] {
@@ -150,7 +151,8 @@
 			&::before {
 				transform: translate(0, -100%);
 			}
-			& > .wp-block-mgcat-chapter {
+			& > .wp-block-mgcat-chapter,
+			& > .wp-block-mgcat-introduction {
 				opacity: 1;
 			}
 		}
@@ -207,7 +209,8 @@
 			}
 		}
 	}
-	.wp-block-mgcat-chapter { 
+	.wp-block-mgcat-chapter, 
+	.wp-block-mgcat-introduction { 
 		margin-top: 0;
 		margin-bottom: 0;
 	}
