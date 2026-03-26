@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	} );
 
 	document.body.addEventListener( "mouseenter", e => {
-		if( e.target.matches( "img" ) && e.target.getAttribute("alt").length > 0 ) {
+		if( e.target.matches( "img" ) && e.target.getAttribute("alt").length > 0 && e.target.closest( ".wp-block-mgcat-training" ) !== null ) {
 			console.log( 'img' );
 			const img = e.target;
 			const toolTip = document.createElement( "span" );
