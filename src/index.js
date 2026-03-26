@@ -2,15 +2,16 @@ import 'vite/modulepreload-polyfill';
 import './style.scss';
 
 // import 'node_modles/fslightbox';
-import GLightbox from 'glightbox';
+// import GLightbox from 'glightbox';
 
-// // GSAP
+// GSAP
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-// Slider - Library import example
-// import { tns } from "tiny-slider"
+const stripslashes = ( s ) => {
+	return s.replace(/\\(.)/g, '$1');
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Lazy load fade in
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const split = link.href.split( "#" );
 		if( 
 			split.length === 2 && 
-			split[0] === `${window.location.origin}${window.location.pathname}` && 
+			stripslashes( split[0]) === stripslashes( `${window.location.origin}${window.location.pathname}` ) && 
 			split[1].length > 0 &&
 			document.querySelector( `#${split[1]}` ) 
 		) {
