@@ -4,6 +4,7 @@
 			&.post {
 				.wp-block-post-featured-image {
 					overflow: hidden;
+					transition: all 0.2s;
 				}
 				@media(hover: hover) {
 					&:hover {
