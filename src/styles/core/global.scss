@@ -8,6 +8,10 @@
 
 html {
 	box-sizing: border-box;
+	scroll-padding-top: 124px;
+	@media (width < 992px) {
+		scroll-padding-top: 124px;
+	}
 
 	*,
 	*::before,
@@ -18,10 +22,6 @@ html {
 
 body {
 	font-variation-settings: 'wght' 350, 'wdth' 100, 'slnt' 0;
-}
-
-html, body {
-	scroll-margin-top: 134px;
 }
 
 // :where(.wp-block-group.has-background) {

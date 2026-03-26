@@ -23,6 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		} );
 	} );
 
+	// Smooth scroll hashes
+	document.querySelectorAll( "a" ).forEach( link => {
+		const split = link.href.split( "#" );
+		if( 
+			split.length === 2 && 
+			split[0] === `${window.location.origin}${window.location.pathname}` && 
+			split[1].length > 0 &&
+			document.querySelector( `#${split[1]}` ) 
+		) {
+			link.addEventListener( "click", ( e ) => {
+				e.preventDefault();
+				document.querySelector( `#${split[1]}` ).scrollIntoView( { behavior: 'smooth', inline: 'start' } );
+			} );
+		}
+	} );
+
 	// Copyright Year
 	document.querySelectorAll(".copyright").forEach( ( p ) => { 
 		p.innerHTML = p.innerHTML.replace( '{YEAR}', new Date().getUTCFullYear() );
@@ -30,12 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	document.body.addEventListener( "mouseenter", e => {
 		if( e.target.matches( "img" ) && e.target.getAttribute("alt").length > 0 && e.target.closest( ".wp-block-mgcat-training" ) !== null ) {
-			console.log( 'img' );
 			const img = e.target;
 			const toolTip = document.createElement( "span" );
 			toolTip.classList.add( "tool-tip" );
 			toolTip.innerHTML = img.getAttribute("alt");
-			console.log( img, img.parentNode );
 			img.parentNode.appendChild( toolTip );
 
 			img.addEventListener( "mouseleave", () => {
@@ -49,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if( !isNaN( parseInt(getComputedStyle(document.documentElement).getPropertyValue('--wp-admin--admin-bar--height').trim())) ) {
 		top -= parseInt(getComputedStyle(document.documentElement).getPropertyValue('--wp-admin--admin-bar--height').trim());
 	}
-	console.log( top );
+	
 	gsap.timeline({
 		scrollTrigger: {
 			scrub: 1,
