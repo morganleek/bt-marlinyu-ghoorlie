@@ -3,23 +3,28 @@
 		&.is-style-naked {
 			.wp-block-button__link {
 				background-color: transparent;
-				padding: 11px 28px 10px 0;
 				font-size: 1.125rem;
 				position: relative;
 				font-weight: normal;
-				background: url(./images/dots-white.svg) 0 0/4px 2px repeat-x;
-				border-radius: 0;
-				&::after {
-					content: "";
-					width: 14px;
-					height: 14px;
-					background-color: #fff;
-					position: absolute;
-					top: 50%;
-					right: 0;
-					clip-path: path("M4.5,13c-.3,0-.5,0-.7-.3-.4-.4-.4-1,0-1.4l4.3-4.3L3.8,2.7c-.4-.4-.4-1,0-1.4s1-.4,1.4,0l5,5c.4.4.4,1,0,1.4l-5,5c-.2.2-.5.3-.7.3Z");
-					transform: translate(0, -50%);
-					transition: all 0.2s;
+				padding: 0;
+				color: currentColor;
+				// font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
+				footer & {
+					padding: 11px 28px 10px 0;
+					background: url(./images/dots-white.svg) 0 0/4px 2px repeat-x;
+					border-radius: 0;
+					&::after {
+						content: "";
+						width: 14px;
+						height: 14px;
+						background-color: #fff;
+						position: absolute;
+						top: 50%;
+						right: 0;
+						clip-path: path("M4.5,13c-.3,0-.5,0-.7-.3-.4-.4-.4-1,0-1.4l4.3-4.3L3.8,2.7c-.4-.4-.4-1,0-1.4s1-.4,1.4,0l5,5c.4.4.4,1,0,1.4l-5,5c-.2.2-.5.3-.7.3Z");
+						transform: translate(0, -50%);
+						transition: all 0.2s;
+					}
 				}
 				@media (hover: hover) {
 					&:hover {
@@ -31,8 +36,11 @@
 			}
 		}
 		.wp-block-button__link {
-			font-weight: 600;
+			font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0;
 			transition: background 0.2s;
+			.has-acumin-variable-font-family & {
+				font-variation-settings:"wght" 700,"wdth" 61,"slnt" 0;
+			}
 			&.has-large-font-size {
 				font-size: 1.25rem;
 			}

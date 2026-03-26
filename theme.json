@@ -256,6 +256,20 @@
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
+		"blocks": {
+			"core/button": {
+				"color": {
+					"background": "var(--wp--preset--color--mg-gold)"
+				},
+				"elements": {
+          "link": {
+            "color": {
+              "text": "#ffffff"
+            }
+          }
+        }
+			}
+		},
 		"css": "",
 		"color": {
 			"text": "var(--wp--preset--color--mg-emerald)"
