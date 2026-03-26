@@ -4,13 +4,15 @@
 			&.post {
 				.wp-block-post-featured-image {
 					overflow: hidden;
-					transition: all 0.2s;
+					img {
+						transition: all 0.2s;
+					}
 				}
 				@media(hover: hover) {
 					&:hover {
 						.wp-block-post-featured-image {
 							img {
-								transform: scale(110%);
+								transform: scale(1.1);
 							}
 						}
 					}
