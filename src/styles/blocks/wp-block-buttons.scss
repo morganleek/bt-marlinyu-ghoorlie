@@ -35,21 +35,34 @@
 				}
 			}
 		}
+		&.is-style-outline {
+			.wp-block-button__link {
+				&:not([class*="-background-color"]) {
+					background-color: transparent;
+				}
+			}
+		}
 		.wp-block-button__link {
 			font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0;
-			transition: background 0.2s;
+			transition: all 0.2s;
 			.has-acumin-variable-font-family & {
 				font-variation-settings:"wght" 700,"wdth" 61,"slnt" 0;
 			}
 			&.has-large-font-size {
 				font-size: 1.25rem;
 			}
-			@media (hover: hover) {
-				&.has-mg-gold-background-color:hover {
-					background-color: #c5731b !important;
-				}
-				&.has-mg-grey-background-color:hover {
-					background-color: var(--wp--preset--color--mg-green-light) !important;
+			
+		}
+		&:not([class*="is-style"]) {
+			.wp-block-button__link {
+				@media (hover: hover) {
+					&:not([class*="-background-color"]):hover,
+					&.has-mg-gold-background-color:hover {
+						background-color: var(--wp--preset--color--mg-gold-dark) !important;
+					}
+					&.has-mg-grey-background-color:hover {
+						background-color: var(--wp--preset--color--mg-green-light) !important;
+					}
 				}
 			}
 		}

@@ -49,6 +49,11 @@
 					"slug": "mg-gold"
 				},
 				{
+					"color": "#c5731b",
+					"name": "Gold Dark",
+					"slug": "mg-gold-dark"
+				},
+				{
 					"color": "#203727",
 					"name": "Emerald",
 					"slug": "mg-emerald"
