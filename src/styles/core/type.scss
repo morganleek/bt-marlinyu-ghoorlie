@@ -230,13 +230,10 @@ strong {
 				grid-template-columns: repeat(12, 1fr) auto;
 				gap: 24px;
 			}
-			#frm_field_7_container,
-			#frm_field_8_container,
 			.field_name,
 			.field_email {
 				grid-column: span 6;
 			}
-			#frm_field_10_container, 
 			.field_submit {
 				grid-area: 1 / 13 / 2 / 14;
 				align-self: center;
