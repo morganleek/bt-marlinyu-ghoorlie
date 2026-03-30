@@ -3,6 +3,7 @@
 :root {
 	:where(.wp-element-button) {
 		background-color: var(--wp--preset--color--mg-gold);
+		color: #fff;
 		font-size: var(--wp--preset--font-size--large) !important;
 		line-height: var(--wp--custom--large--typography--line-height);
 		font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0;
