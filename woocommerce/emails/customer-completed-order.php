@@ -29,8 +29,7 @@ $email_improvements_enabled = FeaturesUtil::feature_is_enabled( 'email_improveme
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php echo $email_improvements_enabled ? '<div class="email-introduction">' : ''; ?>
-
-	<p>Your order has been processed.</p>
+	
 	<p>Please find attached to the bottom of this email your access tokens for the Cultural Awareness Training platform. Each token is a link that gives one user access to the platform. Once that user completed their training that token will no longer be valid.</p>
 
 <?php echo $email_improvements_enabled ? '</div>' : ''; ?>
