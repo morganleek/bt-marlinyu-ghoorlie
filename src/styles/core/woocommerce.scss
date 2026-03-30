@@ -83,6 +83,12 @@ table.wc-block-cart-items {
 
 .wc-block-components-button:not(.is-link) {
 	color: #fff;
+	@media (hover: hover) {
+		.frm_forms.with_frm_style .frm_form_field button.frm_button_submit:hover {
+			color: #fff;
+			background-color: var(--wp--preset--color--mg-gold-dark);
+		}
+	}
 }
 .wc-block-cart__submit-button {
 	width: auto;
