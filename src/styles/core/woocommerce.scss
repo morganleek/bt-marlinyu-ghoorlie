@@ -179,3 +179,7 @@ table.wc-block-cart-items {
 		font-size: var(--wp--custom--heading-2--typography--font-size);
 	}
 }
+
+.woocommerce-order-received .order-again {
+	display: none;
+}
