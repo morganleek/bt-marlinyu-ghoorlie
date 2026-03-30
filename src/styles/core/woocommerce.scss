@@ -139,3 +139,32 @@ table.wc-block-cart-items {
 	font-size: 1rem;
 	text-decoration: none;
 }
+
+// Stripe
+.p-CardCvcIcons.Input .c-InputPadding,
+.p-CardNumberInput .p-CardIcons {
+	padding-top: 0 !important;
+}
+
+.wc-block-components-product-name {
+	// font-size: var(--wp--custom--heading-3--typography--font-size) !important;
+	font-size: var(--wp--preset--font-size--large) !important;
+  font-variation-settings: "wght" 700, "wdth" 61, "slnt" 0;
+  letter-spacing: .05em;
+  line-height: var(--wp--custom--large--typography--line-height);
+  text-transform: uppercase;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-checkout-order-summary__title .wc-block-components-checkout-order-summary__title-text,
+.wc-block-components-totals-item__label,
+.wc-block-components-formatted-money-amount,
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__label, 
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__value {
+	font-variation-settings: "wght" 600, "wdth" 61, "slnt" 0;
+	font-size: 1.375rem;
+	line-height: 1.2em;
+}
+
+.wc-block-components-order-summary .wc-block-components-order-summary-item__description p {
+	display: none;
+}
