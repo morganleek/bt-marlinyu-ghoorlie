@@ -16,8 +16,6 @@ table.wc-block-cart-items {
 	}
 }
 
-
-
 .woocommerce-page .input-text {
 	background: #fff;
 	border: 2px solid #D0DFD9;
@@ -83,6 +81,9 @@ table.wc-block-cart-items {
 	}
 }
 
+.wc-block-components-button:not(.is-link) {
+	color: #fff;
+}
 .wc-block-cart__submit-button {
 	width: auto;
 }
