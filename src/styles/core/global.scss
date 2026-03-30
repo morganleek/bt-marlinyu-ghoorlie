@@ -37,10 +37,10 @@ html {
 		box-sizing: inherit;
 	}
 	
-	a:-webkit-any-link {
-		color: inherit;
-		// color: #324431;
-	}
+	// a:-webkit-any-link {
+	// 	color: inherit;
+	// 	// color: #324431;
+	// }
 }
 
 body {
@@ -54,15 +54,15 @@ body {
 // 	// }
 // }
 
-img {
-	// &[loading="lazy"] {
-	// 	opacity: 0;
-	// 	transition: opacity 0.2s;
-	// }
-	// &.has-loaded {
-	// 	opacity: 1;
-	// }
-}
+// img {
+// 	&[loading="lazy"] {
+// 		opacity: 0;
+// 		transition: opacity 0.2s;
+// 	}
+// 	&.has-loaded {
+// 		opacity: 1;
+// 	}
+// }
 
 input[type="text"],
 input[type="email"],

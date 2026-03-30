@@ -141,6 +141,7 @@ table.wc-block-cart-items {
 }
 
 // Stripe
+.p-CardNumberInput .p-CardIcons
 .p-CardCvcIcons.Input .c-InputPadding,
 .p-CardNumberInput .p-CardIcons {
 	padding-top: 0 !important;
@@ -171,4 +172,10 @@ table.wc-block-cart-items {
 
 .wc-block-components-title.wc-block-components-title {
 	font-size: 1.5rem;;
+}
+
+.wp-block-woocommerce-order-confirmation-status {
+	& > h1 {
+		font-size: var(--wp--custom--heading-2--typography--font-size);
+	}
 }
