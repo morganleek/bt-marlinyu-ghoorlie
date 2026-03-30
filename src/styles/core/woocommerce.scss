@@ -84,7 +84,7 @@ table.wc-block-cart-items {
 .wc-block-components-button:not(.is-link) {
 	color: #fff;
 	@media (hover: hover) {
-		.frm_forms.with_frm_style .frm_form_field button.frm_button_submit:hover {
+		&:hover {
 			color: #fff;
 			background-color: var(--wp--preset--color--mg-gold-dark);
 		}
@@ -92,4 +92,41 @@ table.wc-block-cart-items {
 }
 .wc-block-cart__submit-button {
 	width: auto;
+}
+.wp-block-woocommerce-cart-items-block {
+	.wc-block-components-product-name {
+		text-decoration: none;
+		font-size: var(--wp--preset--font-size--large) !important;
+		font-family: var(--wp--preset--font-family--acumin-variable) !important;
+		font-variation-settings: "wght" 700, "wdth" 61, "slnt" 0;
+		letter-spacing: .05em;
+		line-height: var(--wp--custom--large--typography--line-height);
+		margin-top: 0;
+		text-transform: uppercase;
+		padding-top: 0 !important;
+		transition: color 0.2s;
+		@media (hover: hover) {
+			&:hover {
+				color: var(--wp--preset--color--mg-gold-dark);
+			}
+		}
+	}
+	.wc-block-components-product-metadata {
+		display: none;
+	}
+
+}
+
+.wp-block-woocommerce-product-details {
+	&.is-style-minimal {
+		ul.tabs.wc-tabs {
+			display: none;
+		}
+	}
+}
+
+.wc-block-components-product-price .woocommerce-Price-amount {
+  font-variation-settings: 'wght' 500, 'wdth' 60, 'slnt' 0;
+  font-size: 2rem;
+  letter-spacing: 0.025em;
 }

@@ -10,6 +10,12 @@
 		transition: background .2s;
 		border-radius: 9999px;
 		box-shadow: none;
+		@media (hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: var(--wp--preset--color--mg-gold-dark);
+			}
+		}
 	}
 }
 
