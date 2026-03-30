@@ -130,3 +130,12 @@ table.wc-block-cart-items {
   font-size: 2rem;
   letter-spacing: 0.025em;
 }
+
+.woocommerce-account .wp-block-post-title, .woocommerce-account main .woocommerce, .woocommerce-cart .wp-block-post-title, .woocommerce-cart main .woocommerce, .woocommerce-checkout .wp-block-post-title, .woocommerce-checkout main .woocommerce {
+	max-width: 100%;
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content .wc-forward {
+	font-size: 1rem;
+	text-decoration: none;
+}
