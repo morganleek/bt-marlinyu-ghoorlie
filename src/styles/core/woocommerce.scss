@@ -183,3 +183,10 @@ table.wc-block-cart-items {
 .woocommerce-order-received .order-again {
 	display: none;
 }
+
+.wc-block-order-confirmation-summary ul li>.wc-block-order-confirmation-summary-list-item__key {
+  font-variation-settings: "wght" 600, "wdth" 61, "slnt" 0;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 0.025em;
+}
