@@ -73,7 +73,7 @@ strong {
 		.frm_form_field {
 			position: relative;
 			margin: 0;
-			&:not(:has(> .frm_submit)):not(.vertical_radio):not(.frm-cf-turnstile) {
+			&:not(:has(> .frm_submit)):not(.vertical_radio):not(:has(.frm-cf-turnstile)) {
 				background: #fff;
 				border: 2px solid #D0DFD9;
 				border-radius: 15px;
@@ -85,7 +85,7 @@ strong {
 				}
 			}
 			&.frm_none_container {
-				&:not(:has(> .frm_submit)):not(.vertical_radio) {
+				&:not(:has(> .frm_submit)):not(.vertical_radio):not(:has(.frm-cf-turnstile)) {
 					min-height: 54px;
 					input:not([type="checkbox"]):not([type="radio"]), textarea {
 						padding-left: 16px;
