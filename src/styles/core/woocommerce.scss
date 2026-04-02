@@ -95,9 +95,9 @@ table.wc-block-cart-items {
 }
 .wp-block-woocommerce-cart-items-block {
 	.wc-block-components-product-name {
+		font-family: var(--wp--preset--font-family--acumin-variable) !important;
 		text-decoration: none;
 		font-size: var(--wp--preset--font-size--large) !important;
-		font-family: var(--wp--preset--font-family--acumin-variable) !important;
 		font-variation-settings: "wght" 700, "wdth" 61, "slnt" 0;
 		letter-spacing: .05em;
 		line-height: var(--wp--custom--large--typography--line-height);
@@ -148,7 +148,7 @@ table.wc-block-cart-items {
 }
 
 .wc-block-components-product-name {
-	// font-size: var(--wp--custom--heading-3--typography--font-size) !important;
+	font-family: var(--wp--preset--font-family--acumin-variable) !important;
 	font-size: var(--wp--preset--font-size--large) !important;
   font-variation-settings: "wght" 700, "wdth" 61, "slnt" 0;
   letter-spacing: .05em;
