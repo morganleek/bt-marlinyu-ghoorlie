@@ -146,22 +146,22 @@
 				},
 				{
 					"name": "32",
-					"size": "2rem",
+					"size": "clamp(1.5rem, 0.875rem + 2vw, 2rem)",
 					"slug": "50"
 				},
 				{
 					"name": "40",
-					"size": "2.5rem",
+					"size": "clamp(1.75rem, 0.8125rem + 3vw, 2.5rem)",
 					"slug": "60"
 				},
 				{
 					"name": "48",
-					"size": "3rem",
+					"size": "clamp(2rem, 0.75rem + 4vw, 3rem)",
 					"slug": "70"
 				},
 				{
 					"name": "100",
-					"size": "6.25rem",
+					"size": "clamp(3.5rem, 0.0625rem + 11vw, 6.25rem)",
 					"slug": "80"
 				}
 			],
