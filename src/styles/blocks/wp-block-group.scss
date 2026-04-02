@@ -1,3 +1,13 @@
+@property --7-x-position { syntax: '<percentage>'; inherits: false; initial-value: 20%; }
+@property --7-y-position { syntax: '<percentage>'; inherits: false; initial-value: 80%; }
+
+:root {
+	--7-x-position: 20%
+	--7-y-position: 80%
+}
+
+@keyframes loading { 25% {--7-x-position: 15%;--7-y-position: 15%;}50% {--7-x-position: 80%;--7-y-position: 15%;} }
+
 .wp-block-group {
 	&.mailing-list {
 		position: relative;
@@ -18,6 +28,73 @@
 		& > .wp-block-group {
 			flex-basis: 100%;
 			padding-bottom: 1.5rem;
+		}
+	}
+	&.modal-outer {
+		margin: 0;
+		.modal {
+			iframe {
+				display: block;
+			}
+		}
+		&:not(.block-editor-block-list__block) {
+			margin: 0;
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 99999;
+			padding-top: max(10vh, 1.5rem);
+			opacity: 0;
+			transition: opacity 0.3s;
+			pointer-events: none;
+			background: rgba(0, 0, 0, 0.2);
+			overflow-y: scroll;
+		}
+		.close-button {
+			border: 0 none;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 1.5rem;
+			right: 1.5rem;
+			margin: 0;
+			padding: 0;
+			background-color: transparent;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: var(--wp--preset--color--mg-green-dark);
+				transition: background-color 0.2s;
+				clip-path: path("M19.9998 22.3334L11.8332 30.5001C11.5276 30.8056 11.1387 30.9584 10.6665 30.9584C10.1943 30.9584 9.80539 30.8056 9.49984 30.5001C9.19428 30.1945 9.0415 29.8056 9.0415 29.3334C9.0415 28.8612 9.19428 28.4723 9.49984 28.1667L17.6665 20.0001L9.49984 11.8334C9.19428 11.5279 9.0415 11.139 9.0415 10.6667C9.0415 10.1945 9.19428 9.80564 9.49984 9.50008C9.80539 9.19453 10.1943 9.04175 10.6665 9.04175C11.1387 9.04175 11.5276 9.19453 11.8332 9.50008L19.9998 17.6667L28.1665 9.50008C28.4721 9.19453 28.861 9.04175 29.3332 9.04175C29.8054 9.04175 30.1943 9.19453 30.4998 9.50008C30.8054 9.80564 30.9582 10.1945 30.9582 10.6667C30.9582 11.139 30.8054 11.5279 30.4998 11.8334L22.3332 20.0001L30.4998 28.1667C30.8054 28.4723 30.9582 28.8612 30.9582 29.3334C30.9582 29.8056 30.8054 30.1945 30.4998 30.5001C30.1943 30.8056 29.8054 30.9584 29.3332 30.9584C28.861 30.9584 28.4721 30.8056 28.1665 30.5001L19.9998 22.3334Z");
+			}
+			@media( hover: hover ) {
+				&:hover {
+					&::before {
+						background-color: var(--wp--preset--color--mg-green-two);
+					}
+				}
+			}
+		}
+		@media (width < 782px) { 
+			& > .wp-block-group {
+				padding: 2rem 1.5rem !important;
+				.close-button {
+					transform: scale(60%);
+					transform-origin: top right;
+				}
+			}
+		}
+	}
+	&.modal-outer {
+		body.show-modal & {
+			opacity: 1;
+			pointer-events: all;
 		}
 	}
 }

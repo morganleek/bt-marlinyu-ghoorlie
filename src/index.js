@@ -77,6 +77,34 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
+	// Close when modal is open and clicked outside of
+	document.body.addEventListener( "click", e => {
+		if( 
+			document.body.classList.contains( "show-modal" ) && 
+			e.target.closest( ".modal" ) === null
+		) {
+			document.body.classList.remove( "show-modal" );
+		}
+	} );
+
+	// Modal close button
+	document.querySelectorAll( ".modal-outer .modal" ).forEach( modalOuter => {
+		const closeButton = document.createElement( "button" );
+		closeButton.classList.add( "close-button" );
+		closeButton.addEventListener( "click", () => {
+			document.body.classList.remove( "show-modal" );
+		} );
+		modalOuter.appendChild( closeButton );
+	} );
+
+	// Product catalogue buttons 
+	document.querySelectorAll( ".show-modal a" ).forEach( button => {
+		button.addEventListener( "click", e => {
+			e.preventDefault();
+			setTimeout( () => document.body.classList.add( "show-modal" ), 100 );
+		} );
+	} );
+
 	// // Animate on Scroll
 	// document.querySelectorAll( ".wp-block-mgcat-training h1, .wp-block-mgcat-training h2, .wp-block-mgcat-training h3, .wp-block-mgcat-training h4, .wp-block-mgcat-training h5, .wp-block-mgcat-training h6, .wp-block-mgcat-training p, .wp-block-mgcat-training .wp-block-list, .wp-block-mgcat-training .wp-block-embed, .wp-block-mgcat-training .wp-block-image, .wp-block-mgcat-training .wp-block-pullquote, .wp-block-mgcat-training .wp-block-group.has-white-background-color:has(.wp-block-audio)" ).forEach( block => {
 	// 	ScrollTrigger.create({
