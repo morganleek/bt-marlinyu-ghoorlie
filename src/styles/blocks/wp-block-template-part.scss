@@ -65,6 +65,9 @@
 					}
 				}	
 			}
+			@media (width < 600px) {
+				flex-basis: 140px !important;
+			}
 		}
 		body.is-scrolled & {
 			& > .wp-block-group {
