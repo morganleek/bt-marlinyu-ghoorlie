@@ -34,6 +34,11 @@
 		margin: 0;
 		.modal {
 			iframe {
+				background: radial-gradient(100% 100% at var(--7-x-position) var(--7-y-position), #dedede 0%, transparent),#cdcdcd;
+				animation-name: loading;
+				animation-iteration-count: infinite;
+				animation-duration: 2s;
+				transition-timing-function: ease-in;
 				display: block;
 			}
 		}
