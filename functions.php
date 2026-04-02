@@ -141,3 +141,8 @@
 			'label' => __( 'Naked', 'bones_name' ),
 		] );
 	}
+
+	function remove_continue_shopping_button( $message, $products ) {
+		return str_replace( 'Continue shopping', '', $message );
+	}
+	add_filter( 'wc_add_to_cart_message_html', 'remove_continue_shopping_button', 10, 2 );
