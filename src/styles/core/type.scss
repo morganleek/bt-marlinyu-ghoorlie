@@ -73,7 +73,7 @@ strong {
 		.frm_form_field {
 			position: relative;
 			margin: 0;
-			&:not(:has(> .frm_submit)):not(.vertical_radio) {
+			&:not(:has(> .frm_submit)):not(.vertical_radio):not(.frm-cf-turnstile) {
 				background: #fff;
 				border: 2px solid #D0DFD9;
 				border-radius: 15px;
