@@ -16,6 +16,15 @@
 				background-color: var(--wp--preset--color--mg-gold-dark);
 			}
 		}
+		&.wc-block-components-product-button__button,
+		&.wc-block-components-button,
+		&.woocommerce-button {
+			padding: 12px 20px;
+			letter-spacing: .05em;
+			font-variation-settings: "wght" 700, "wdth" 61, "slnt" 0;
+			text-transform: uppercase;
+			line-height: var(--wp--custom--large--typography--line-height);
+		}
 	}
 }
 
@@ -125,4 +134,40 @@ button {
 			}
 		}
 	}	
+}
+
+.woocommerce-page {
+	form {
+		.form-row {
+			input.input-text, 
+			select, 
+			textarea.input-text {
+				background-color: #fff;
+				box-sizing: border-box;
+				color: #2b2d2f;
+				font-family: inherit;
+				font-size: 16px;
+				font-style: inherit;
+				font-weight: inherit;
+				height: 50px;
+				letter-spacing: inherit;
+				line-height: 25px;
+				margin: 0;
+				text-decoration: inherit;
+				text-transform: inherit;
+				width: 100%;
+				border: 2px solid #D0DFD9;
+				border-radius: 15px;
+				min-height: 62px;
+				padding: 12px 15px !important;
+				transition: all .2s;
+				&:focus {
+					border: 2px solid var(--wp--preset--color--mg-gold);
+				}
+				&:focus-visible {
+					outline: 0 none;
+				}
+			}
+		}
+	}
 }
