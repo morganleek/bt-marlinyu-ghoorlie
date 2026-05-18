@@ -48,6 +48,7 @@
 	text-decoration: none;
 	display: inline-block;
 	margin: 10px 0;
+	z-index: 1;
 	@media( hover: hover ) {
 		&:hover {
 			background-color: var(--wp--preset--color--mg-gold-dark) !important;
