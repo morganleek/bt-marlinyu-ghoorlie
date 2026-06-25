@@ -202,3 +202,57 @@ button {
 		}
 	}
 }
+
+form.post-password-form {
+	padding-top: var(--wp--preset--spacing--70);
+  padding-bottom: var(--wp--preset--spacing--80);
+	label {
+		display: block;
+	}
+	input[type="password"] {
+		background-color: #fff;
+		box-sizing: border-box;
+		color: #2b2d2f;
+		font-family: inherit;
+		font-size: 16px;
+		font-style: inherit;
+		font-weight: inherit;
+		height: 50px;
+		letter-spacing: inherit;
+		line-height: 25px;
+		margin: 0;
+		text-decoration: inherit;
+		text-transform: inherit;
+		width: 100%;
+		border: 2px solid #D0DFD9;
+		border-radius: 15px;
+		min-height: 62px;
+		padding: 16px 12px !important;
+		transition: all .2s;
+		max-width: 320px;
+	}
+	input[type="submit"] {
+		background-color: var(--wp--preset--color--mg-gold);
+		color: #fff;
+		font-size: var(--wp--preset--font-size--large) !important;
+		border-radius: 9999px;
+		box-shadow: none;
+		align-items: center;
+		display: inline-flex;
+		height: auto;
+		justify-content: center;
+		position: relative;
+		text-align: center;
+		transition: box-shadow .1s linear;
+		padding: 12px 20px;
+		font-variation-settings: "wght" 700, "wdth" 61, "slnt" 0;
+		text-transform: uppercase;
+		line-height: var(--wp--custom--large--typography--line-height);
+		display: inline-block;
+		border: 0 none;
+		letter-spacing: .05em;
+		font-variation-settings: "wght" 700, "wdth" 61, "slnt" 0;
+	  font-size: var(--wp--preset--font-size--large) !important;
+		font-family: var(--wp--preset--font-family--acumin-variable);
+	}
+}
