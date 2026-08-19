@@ -204,20 +204,6 @@
 				{
 					"fontFace": [
 						{
-							"fontFamily": "\"the-seasons\"",
-							"fontStretch": "100%",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": ""
-						}
-					],
-					"fontFamily": "\"the-seasons\", sans-serif",
-					"name": "The Seasons",
-					"slug": "the-seasons"
-				},
-				{
-					"fontFace": [
-						{
 							"fontFamily": "\"acumin-variable\"",
 							"fontStretch": "100%",
 							"fontStyle": "normal",
