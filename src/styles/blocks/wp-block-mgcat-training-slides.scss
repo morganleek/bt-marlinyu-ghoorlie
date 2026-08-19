@@ -10,7 +10,7 @@
 	text-transform: uppercase;
 	font-size: 1rem;
 	letter-spacing: 0.025em;
-	font-family: var(--wp--preset--font-family--arimo);
+	font-family: var(--wp--preset--font-family--acumin-variable);
 	transition: all 0.3s;
 	cursor: pointer;
 	&:focus {
@@ -37,7 +37,7 @@
 	justify-content: stretch;
 	background: #fff;
 	font-size: var(--wp--preset--font-size--x-large);
-	font-family: var(--wp--preset--font-family--arimo);
+	font-family: var(--wp--preset--font-family--acumin-variable);
 	border: 1px solid var(--wp--preset--color--mg-green);
 	color: var(--wp--preset--color--mg-green-dark);
 	// box-shadow: var(--drop-shadow);
@@ -317,7 +317,7 @@
 			// text-transform: uppercase;
 			// font-size: 1rem;
 			// letter-spacing: 0.025em;
-			// font-family: var(--wp--preset--font-family--arimo);
+			// font-family: var(--wp--preset--font-family--acumin-variable);
 		}
 	}
 }
