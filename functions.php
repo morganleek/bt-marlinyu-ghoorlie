@@ -106,7 +106,7 @@
 
 	// admin typekits, loading loading through theme
 	add_action( 'enqueue_block_assets', function() { 
-		wp_enqueue_style( 'font-end-fonts', 'https://use.typekit.net/hgr6bqm.css', [], '1.0.0' );
+		wp_enqueue_style( 'font-end-fonts', 'https://use.typekit.net/yap3twj.css', [], '1.0.0' );
 	}, 20 );
 
 	// Custom Block Types
